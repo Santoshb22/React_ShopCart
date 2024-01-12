@@ -21,7 +21,7 @@ if(!clickedProduct) {
 
 
   return (
-    <div className='pt-24 flex flex-wrap justify-evenly gap-6'>
+    <div className='pt-24 min-h-[80vh] flex flex-wrap justify-evenly gap-6'>
       {
         products.map((data)=> <Card 
         onClick={() => handleItemClick(data)}

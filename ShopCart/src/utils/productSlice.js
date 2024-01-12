@@ -4,7 +4,6 @@ const productSlice = createSlice({
     name: "product",
     initialState: {
         productData: null,
-   
     },
     reducers: {
         getProductData: (state, action) => {

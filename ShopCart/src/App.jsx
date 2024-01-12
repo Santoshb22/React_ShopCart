@@ -1,10 +1,13 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, RouterProvider, useSearchParams} from "react-router-dom";
 import PageLayout from "./PageLayout/PageLayout/PageLayout";
 import Home from "./Pages/Home/Home";
 import useFetchProduct from "./hooks/useFetchProduct";
 import ItemDetail from "./Pages/ItemDetail/ItemDetail";
+import Cart from "./Pages/CartPage/Cart";
 
 function App() {
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +20,10 @@ const router = createBrowserRouter([
       {
         path:"itemDetail",
         element: <ItemDetail/>
+      },
+      {
+        path: "cart",
+        element: <Cart/>
       }
     ]
   }

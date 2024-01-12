@@ -3,8 +3,10 @@ import Logo from '../Logo/Logo'
 import { Link } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa';
 import { FaShoppingCart } from 'react-icons/fa'
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+    const cartVal = useSelector(store => store.cart.length)
   return (
     <nav className='flex items-center justify-evenly fixed  border-b-2 shadow-gray-700 shadow-md w-screen bg-[#181818] text-white p-4'>
         <div className='flex items-center gap-1'>
@@ -27,10 +29,10 @@ const Header = () => {
             </ul>
         </div>
 
-        <Link className='flex items-center gap-1'>
+        <Link to={"cart"} className='flex items-center gap-1'>
             <FaShoppingCart className='size-6'/> 
             Cart
-            <span className='mx-1' >0</span>
+            <span className='mx-1 text-red-500 py-1 rounded-lg' >{cartVal}</span>
         </Link>
     </nav>
   )
