@@ -38,7 +38,7 @@ const Header = () => {
             <ul className='flex gap-4'>
                 <li><Link to={"men"}>Men</Link></li>
                 <li><Link to={"women"}>Women</Link></li>
-                <li><Link to={"electronics"}>Electronics</Link></li>
+                <li className='hidden sm:block'><Link to={"electronics"}>Electronics</Link></li>
             </ul>
         </div>
 

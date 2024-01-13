@@ -5,14 +5,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getClickedItem } from '../../utils/clickedItem';
 import NoItemInCart from '../../Components/Cart/NoItemInCart';
+import CartRightSide from '../../Components/Cart/CartRightSide';
 
 const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((store) => store.product.productData);
   const cartItem = useSelector((store) => store.cart);
-  const getCartItems =
-    cartItem.length > 0 ? products.filter((item) => cartItem.includes(item.id)) : [];
+  const getCartItems = cartItem.length > 0 ? products.filter((item) => cartItem.includes(item.id)) : [];
 
   const handleItemLocation = (clickedItem) => {
     dispatch(getClickedItem(clickedItem));
@@ -41,7 +41,7 @@ const Cart = () => {
       </div>
 
       <div className=''>
-        Price detail
+        <CartRightSide/>
       </div>
     </div>
   );

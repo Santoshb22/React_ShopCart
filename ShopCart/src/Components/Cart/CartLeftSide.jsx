@@ -8,6 +8,7 @@ const CartLeftSide = ({img, onClick, product, price, title}) => {
     dispatch(removeCart(product.id))
   }
   return (
+    
 <>
     <div onClick={onClick} className='w-96 mt-10'>
       <img className='h-64 w-72 rounded-md' src= {img} alt="Card Image" />
