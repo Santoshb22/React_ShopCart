@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 const Header = () => {
     const cartVal = useSelector(store => store.cart.length)
   return (
-    <nav className='flex items-center justify-evenly fixed  border-b-2 shadow-gray-700 shadow-md w-screen bg-[#181818] text-white p-4'>
+    <nav className='flex items-center justify-evenly fixed border-b-2 shadow-gray-700 shadow-md w-screen bg-[#181818] text-white p-4'>
         <div className='flex items-center gap-1'>
             <Logo/>
            <Link to={"/"}> <span className='font-semibold text-xl'>ShopCart</span> </Link>
@@ -23,7 +23,7 @@ const Header = () => {
 
         <div >
             <ul className='flex gap-4'>
-                <li><Link>Men</Link></li>
+                <li><Link to={"men"}>Men</Link></li>
                 <li><Link>Women</Link></li>
                 <li><Link>Electronics</Link></li>
             </ul>

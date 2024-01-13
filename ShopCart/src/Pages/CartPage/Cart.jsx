@@ -11,7 +11,6 @@ const Cart = () => {
   const cartItem = useSelector(store => store.cart)
   const getCartItems = cartItem.length > 0 ? products.filter(item => cartItem.includes(item.id)) : [];
 
-  console.log(getCartItems)
   const handleItemLocation = (clickedItem) => {
     dispatch(getClickedItem(clickedItem))
     navigate("/itemDetail")

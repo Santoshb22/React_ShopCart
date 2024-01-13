@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-   <footer className='flex justify-evenly bg-[#000000] text-white py-4   '>
+   <footer className='flex justify-evenly bg-[#000000] text-white py-4 border-2 shadow-gray-700 shadow-md  '>
     <div>
         <ul>
            <li className='text-[#b2b2b2] my-2'>About</li>
