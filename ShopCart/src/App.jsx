@@ -5,6 +5,8 @@ import useFetchProduct from "./hooks/useFetchProduct";
 import ItemDetail from "./Pages/ItemDetail/ItemDetail";
 import Cart from "./Pages/CartPage/Cart";
 import MenPage from "./Pages/MenPage/MenPage";
+import WomenPage from "./Pages/WomenPage/WomenPage";
+import ElectronicsPage from "./Pages/Electronics/ElectronicsPage";
 
 function App() {
 
@@ -29,12 +31,22 @@ const router = createBrowserRouter([
       {
         path: "men",
         element: <MenPage/>
+      },
+      {
+        path: "women",
+        element: <WomenPage/>
+      },
+      {
+        path: "electronics",
+        element: <ElectronicsPage/>
       }
     ]
   }
 ])
 
 useFetchProduct()
+
+
   return (
   <RouterProvider router = {router}/>
   )
