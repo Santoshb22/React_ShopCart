@@ -10,14 +10,14 @@ const CartLeftSide = ({img, onClick, product, price, title}) => {
   return (
     
 <>
-    <div onClick={onClick} className='w-96 mt-10'>
-      <img className='h-64 w-72 rounded-md' src= {img} alt="Card Image" />
-      <p className='font-semibold'>{title}</p>
-      <p className='font-semibold font-mono'>${price}</p>
+    <div onClick={onClick} className='w-52 sm:w-96 mt-10 border-2 p-2'>
+      <img className='sm:w-72 h-24 mx-auto sm:h-auto rounded-md ' src= {img} alt="Card Image" />
+      <p className='font-semibold text-xs sm:text-lg '>{title}</p>
+      <p className='font-semibold  text-sm sm:text-md font-mono'>${price}</p>
     </div>
     <div>
        <button onClick={handleRemoveItem}
-      className='bg-orange-600 w-full  rounded-md font-semibold font-mono px-2 py-2'>
+      className='bg-orange-600 w-full text-sm sm:text-xl rounded-md font-semibold font-mono px-2 py-0.5 sm:py-2'>
         Remove
       </button>
     </div>

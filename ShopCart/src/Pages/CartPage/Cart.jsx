@@ -20,7 +20,7 @@ const Cart = () => {
   };
 
   return (
-    <div className='flex justify-between mx-[10%] gap-10 pt-24 min-h-[98vh] '>
+    <div className=' flex flex-col sm:flex-row items-center sm:items-start sm:flex sm:justify-between mx-[10%] gap-10 pt-16 sm:pt-24 min-h-[95%] sm:min-h-[98vh] '>
       <div>
         {cartItem.length > 0 ? (
           getCartItems.map((cartItems) => (
