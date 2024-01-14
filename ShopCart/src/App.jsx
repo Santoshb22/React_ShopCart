@@ -7,6 +7,7 @@ import Cart from "./Pages/CartPage/Cart";
 import MenPage from "./Pages/MenPage/MenPage";
 import WomenPage from "./Pages/WomenPage/WomenPage";
 import ElectronicsPage from "./Pages/Electronics/ElectronicsPage";
+import Search from "./Pages/Search/Search";
 
 function App() {
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path:"",
         element: <Home/>
+      },
+      {
+        path: "search",
+        element: <Search/>
       },
       {
         path:"itemDetail",

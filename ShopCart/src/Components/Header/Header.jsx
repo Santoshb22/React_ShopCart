@@ -4,13 +4,16 @@ import { Link } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa';
 import { FaShoppingCart } from 'react-icons/fa'
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+    const navigate = useNavigate()
     const [searchQuery, setSearchQuery] = useState("")
     const cartVal = useSelector(store => store.cart.length)
    
     const handleSearchBar = () => {
-        alert("I haven't built search features please try later")
+        navigate(`search?q=${searchQuery}`)
+        setSearchQuery("")
     }
   return (
     <nav className='flex items-center justify-between sm:justify-evenly fixed z-10 border-b-2 shadow-gray-700 shadow-md w-screen bg-[#181818] text-white p-4'>
@@ -21,12 +24,13 @@ const Header = () => {
 
         <div className='mx-4 flex'>
             <button 
-            className='bg-white px-2 sm:px-3 sm:py-3 rounded-tl-md rounded-bl-md' >
+            className='bg-white px-2 sm:px-3 sm:py-3 rounded-tl-md rounded-bl-md'
+            onClick={handleSearchBar}
+            >
                 <FaSearch className='text-black'/>
             </button>
             <input  
             className=' w-[20vw] sm:w-[40vw] border-none outline-none text-black font-mono px-2 h-8 sm:h-12 sm:py-2 rounded-tr-md rounded-br-md' 
-            onClick={handleSearchBar}
             onChange={(e) => setSearchQuery(e.target.value)}
             value={searchQuery}
             id='Search'
