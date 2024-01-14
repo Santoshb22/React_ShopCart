@@ -40,8 +40,10 @@ const Cart = () => {
         )}
       </div>
 
-      <div className=''>
-        <CartRightSide/>
+      <div>
+        {
+          cartItem.length > 0 && <CartRightSide/>
+        }
       </div>
     </div>
   );
