@@ -26,7 +26,7 @@ const Search = () => {
   } 
   return (
     <div className='pt-24 min-h-[80vh] flex flex-wrap gap-10'>
-      {products ? (
+      {searchResults.length > 0 ? (
         searchResults.map(data => (
           <Card
           onClick={() => {handleClicked(data)}}
@@ -38,7 +38,7 @@ const Search = () => {
           />
         ))
       ) : (
-        <p>Loading...</p>
+        <p className='font-bold text-4xl'>No products available</p>
       )}
     </div>
   );
