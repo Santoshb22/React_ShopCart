@@ -35,7 +35,14 @@ const Header = () => {
             value={searchQuery}
             id='Search'
             type="text" 
-            placeholder='Search for Products, Brands and more' />
+            placeholder='Search for Products, Brands and more' 
+            onKeyPress = {(e) => {
+                if (e.key === 'Enter') {
+                handleSearchBar();
+                }
+            }}
+            />
+           
         </div>
 
         <div >
@@ -46,7 +53,7 @@ const Header = () => {
             </ul>
         </div>
 
-        <Link to={"cart"} className='flex items-center gap-1'>
+        <Link to={"cart"} className='flex items-center gap-1 ml-2'>
             <FaShoppingCart className=' size-4 sm:size-6 hidden sm:block'/> 
             Cart
             <span className='mx-1 text-red-500 py-1 rounded-lg text-sm sm:text-lg' >{cartVal}</span>

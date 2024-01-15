@@ -17,20 +17,19 @@ const ItemDetail = () => {
       if(!isInCart) {
         dispatch(addToCart(clickedItem.id))
       } else {
-        dispatch(removeCart(clickedItem.id))
-        navigate("/")
+        navigate("/cart")
       }
     }
 
 
   return (
-    <div className='flex items-center mx-[10%] gap-10 pt-20 sm:pt-24 sm:min-h-[98vh] min-h-[50vh] '>
+    <div className='flex items-center mx-[10%] gap-10 pt-20 sm:pt-24 min-h-[98vh] '>
         <div>
            <img className='h-auto  border-2' src={clickedItem.image} alt="item image" />
            <button onClick={toggleAddToCartBtn}
             className='bg-orange-600 text-sm sm:text-lg my-4 w-full rounded-md font-semibold font-mono px-2 py-2'>
              {
-               !isInCart ? "Add to cart" : "Remove"
+               !isInCart ? "Add to cart" : "Go to cart"
              }
             </button>
         </div>   
